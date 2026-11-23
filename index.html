@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CEYLON INNOVATES | Imagine. Create. Innovate.</title>
+
+<style>
+
+/* GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8fc;
+    color: #102A43;
+    line-height: 1.6;
+}
+
+:root {
+    --navy: #102A43;
+    --turquoise: #20C9C3;
+    --orange: #FF9F43;
+    --white: #FFFFFF;
+}
+
+/* NAVIGATION BAR */
+
+header {
+    background: var(--navy);
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--turquoise);
+}
+
+/* HOME SECTION */
+
+.hero {
+    min-height: 480px;
+    background: linear-gradient(
+        135deg,
+        #102A43,
+        #176B83,
+        #102A43
+    );
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 6vw, 55px);
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: var(--turquoise);
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.button {
+    display: inline-block;
+    background: var(--orange);
+    color: var(--navy);
+    padding: 13px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: var(--turquoise);
+    transform: translateY(-3px);
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 70px 7%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.section-title span {
+    color: #168F91;
+}
+
+.description {
+    max-width: 750px;
+    margin: 0 auto;
+    color: #526477;
+    line-height: 1.9;
+}
+
+/* ABOUT SECTION */
+
+.about {
+    background: white;
+}
+
+/* OUR FOCUS */
+
+.focus {
+    background: #f5f8fc;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+.card {
+    background: white;
+    padding: 30px 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px #00000012;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+}
+
+.card .icon {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #168F91;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #526477;
+}
+
+/* CREATIVE WORK */
+
+.portfolio {
+    background: white;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+.gallery-item {
+    background: #f5f8fc;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #00000012;
+    transition: 0.3s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    background: #e8eef5;
+    display: block;
+}
+
+.gallery-item h3 {
+    padding: 15px 10px 5px;
+    font-size: 17px;
+}
+
+.gallery-item p {
+    color: #526477;
+    font-size: 14px;
+    padding: 0 10px 18px;
+}
+
+/* EVENTS */
+
+.events {
+    background: #e8f5f7;
+}
+
+.event-box {
+    background: var(--navy);
+    color: white;
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 35px;
+    border-radius: 15px;
+}
+
+.event-box h3 {
+    color: var(--turquoise);
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.event-box p {
+    margin-bottom: 20px;
+}
+
+.event-image {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: white;
+}
+
+.contact-box {
+    margin-top: 30px;
+    line-height: 2;
+}
+
+.contact-box strong {
+    color: #168F91;
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+footer span {
+    color: var(--turquoise);
+}
+
+footer p {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 800px) {
+
+    header {
+        justify-content: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 50px 18px;
+    }
+
+    .gallery-item img {
+        height: 300px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .event-box {
+        padding: 25px 15px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+
+    <div class="logo">
+        <img src="images/Logo.jpg" alt="Ceylon Innovates Logo">
+        <span>CEYLON INNOVATES</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#focus">Our Focus</a>
+        <a href="#portfolio">Our Work</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- HOME -->
+
+<div class="hero" id="home">
+
+    <h1>
+        IMAGINE. CREATE.
+        <span>INNOVATE.</span>
+    </h1>
+
+    <p>
+        Empowering Ideas. Inspiring Innovation.
+        Building a Smarter Tomorrow.
+    </p>
+
+    <a href="#about" class="button">
+        Discover More
+    </a>
+
+</div>
+
+
+<!-- ABOUT US -->
+
+<section class="about" id="about">
+
+    <h2 class="section-title">
+        About <span>Us</span>
+    </h2>
+
+    <p class="description">
+
+        Ceylon Innovates is a fictional Sri Lankan
+        organization concept focused on promoting
+        technology, creativity and innovation.
+
+        We aim to inspire young minds, encourage
+        creative thinking and explore digital
+        opportunities for a better future.
+
+    </p>
+
+</section>
+
+
+<!-- OUR FOCUS -->
+
+<section class="focus" id="focus">
+
+    <h2 class="section-title">
+        Our <span>Focus</span>
+    </h2>
+
+    <p class="description">
+        Exploring opportunities through technology,
+        creativity and innovation.
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">💻</div>
+
+            <h3>Digital Education</h3>
+
+            <p>
+                Encouraging digital learning and
+                improving access to technology education.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">💡</div>
+
+            <h3>Innovation</h3>
+
+            <p>
+                Inspiring creative ideas and developing
+                solutions for everyday challenges.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🚀</div>
+
+            <h3>Technology</h3>
+
+            <p>
+                Exploring modern technologies and
+                digital opportunities.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CREATIVE PORTFOLIO -->
+
+<section class="portfolio" id="portfolio">
+
+    <h2 class="section-title">
+        Our Creative <span>Work</span>
+    </h2>
+
+    <p class="description">
+        A collection of graphic designs, promotional
+        posters and digital content created for
+        Ceylon Innovates.
+    </p>
+
+
+    <div class="gallery">
+
+        <div class="gallery-item">
+
+            <img src="images/Poster1.jpg"
+            alt="The Future Is Digital Poster">
+
+            <h3>The Future Is Digital</h3>
+
+            <p>Promotional Poster Design</p>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="images/Poster2.jpg"
+            alt="Innovation Starts With You Poster">
+
+            <h3>Innovation Starts With You</h3>
+
+            <p>Promotional Poster Design</p>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="images/Instapost.jpg"
+            alt="Instagram Content Design">
+
+            <h3>Young Minds. Big Ideas.</h3>
+
+            <p>Instagram Content Design</p>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="images/Fbpost.jpg"
+            alt="Facebook Content Design">
+
+            <h3>Technology For A Better Tomorrow</h3>
+
+            <p>Facebook Content Design</p>
+
+        </div>
+
+
+        <div class="gallery-item">
+
+            <img src="images/Techexpo.jpg"
+            alt="Innovation Technology Expo Poster">
+
+            <h3>Innovation & Technology Expo 2026</h3>
+
+            <p>Event Poster Design</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- EVENTS -->
+
+<section class="events" id="events">
+
+    <h2 class="section-title">
+        Our <span>Events</span>
+    </h2>
+
+    <div class="event-box">
+
+        <h3>Innovation & Technology Expo 2026</h3>
+
+        <p>
+            Inspiring Ideas. Creating Tomorrow.
+            <br><br>
+
+            Date: 15 December 2026
+            <br>
+
+            Time: 9.00 AM – 4.00 PM
+            <br>
+
+            Location: Innovation Hub, Colombo
+        </p>
+
+        <img
+        src="images/Techexpo.jpg"
+        alt="Technology Expo Event Poster"
+        class="event-image">
+
+        <p>
+            Discover technology, explore creative
+            solutions and celebrate young innovators.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">
+        Get In <span>Touch</span>
+    </h2>
+
+    <p class="description">
+
+        Have an innovative idea?
+
+        Let's imagine, create and innovate together.
+
+    </p>
+
+    <div class="contact-box">
+
+        <p>
+            <strong>Email:</strong>
+            hello@ceyloninnovates.example
+        </p>
+
+        <p>
+            <strong>Location:</strong>
+            Sri Lanka
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>
+        CEYLON <span>INNOVATES</span>
+    </h3>
+
+    <p>IMAGINE. CREATE. INNOVATE.</p>
+
+    <p>
+        Self-initiated fictional portfolio project.
+    </p>
+
+    <p>
+        © 2026 Ceylon Innovates. Portfolio Concept.
+    </p>
+
+</footer>
+
+</body>
+</html>
